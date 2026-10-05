@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WebOS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Desktop -->
+  <main id="desktop">
+
+    <div class="desktop-icons">
+      <button class="desktop-icon" data-app="explorer">
+        <span class="icon">📁</span>
+        <span>Files</span>
+      </button>
+
+      <button class="desktop-icon" data-app="notepad">
+        <span class="icon">📝</span>
+        <span>Notepad</span>
+      </button>
+
+      <button class="desktop-icon" data-app="calculator">
+        <span class="icon">🧮</span>
+        <span>Calculator</span>
+      </button>
+
+      <button class="desktop-icon" data-app="settings">
+        <span class="icon">⚙️</span>
+        <span>Settings</span>
+      </button>
+    </div>
+
+    <!-- Windows are inserted here by JavaScript -->
+    <section id="window-area"></section>
+
+    <!-- Start Menu -->
+    <div id="start-menu" class="hidden">
+      <div class="start-header">
+        <div class="profile">👤</div>
+        <div>
+          <strong>WebOS User</strong>
+          <small>Welcome back</small>
+        </div>
+      </div>
+
+      <div class="start-search">
+        <input type="text" id="app-search" placeholder="Search apps...">
+      </div>
+
+      <h3>Applications</h3>
+
+      <div class="app-grid">
+        <button class="start-app" data-app="explorer">
+          <span>📁</span>Files
+        </button>
+
+        <button class="start-app" data-app="notepad">
+          <span>📝</span>Notepad
+        </button>
+
+        <button class="start-app" data-app="calculator">
+          <span>🧮</span>Calculator
+        </button>
+
+        <button class="start-app" data-app="settings">
+          <span>⚙️</span>Settings
+        </button>
+
+        <button class="start-app" data-app="about">
+          <span>💻</span>About
+        </button>
+      </div>
+
+      <div class="start-footer">
+        <button id="power-button">⏻ Power</button>
+      </div>
+    </div>
+
+    <!-- Notification -->
+    <div id="notification" class="notification">
+      <strong id="notification-title">WebOS</strong>
+      <span id="notification-message">Welcome!</span>
+    </div>
+
+    <!-- Taskbar -->
+    <footer id="taskbar">
+
+      <button id="start-button" class="taskbar-button">
+        <span>⊞</span>
+      </button>
+
+      <div id="taskbar-apps"></div>
+
+      <div class="taskbar-right">
+        <button id="theme-button" title="Toggle theme">☀️</button>
+
+        <div class="system-info">
+          <span id="network">📶</span>
+          <span id="volume">🔊</span>
+          <span id="battery">🔋</span>
+        </div>
+
+        <div id="clock">
+          <strong id="time">00:00</strong>
+          <small id="date">00/00/0000</small>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
